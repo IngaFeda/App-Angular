@@ -28,7 +28,7 @@ export class UserComponent {
   // @Input({required: true}) avatar!:string;
   // @Input({required: true}) name!:string;
 
-  @Input({required: true}) user!: User;
+  @Input({ required: true }) user!: User;
   // {
   //   id: string;
   //   avatar: string;
