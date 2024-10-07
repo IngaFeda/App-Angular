@@ -4,7 +4,6 @@ import { HeaderComponent } from './header/header.component'
 import { UserComponent } from './user/user.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { DUMMY_USERS } from './dummy-users';
-import { dummyTasks } from './dummy-tasks';
 
 @Component({
   selector: 'app-root',
@@ -17,16 +16,15 @@ import { dummyTasks } from './dummy-tasks';
 
 export class AppComponent {
   users = DUMMY_USERS;
-  tasks = dummyTasks;
 
-  userId?: string;
+  selectedUserId!: string;
 
   get selectUser() {
-    return this.users.find((user) => user.id === this.userId);
+    return this.users.find((user) => user.id === this.selectedUserId);
   }
 
   onSelectUser(id: string){
-    this.userId = id;
+    this.selectedUserId = id;
   }
 
 }
