@@ -8,16 +8,10 @@ import { TasksModule } from './tasks/tasks.module';
 
 @NgModule({
     //declarations are for non-stadalone components
-    declarations: [
-        AppComponent, 
-        HeaderComponent, 
-        UserComponent
-    ],
+    declarations: [AppComponent, HeaderComponent, UserComponent],
     bootstrap: [AppComponent],
-    //imports are for standalone components
+    //imports are for standalone components & modules
     imports: [BrowserModule, SharedModule, TasksModule],
 })
 
-export class AppModule {
-
-}
+export class AppModule {} 
