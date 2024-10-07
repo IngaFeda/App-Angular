@@ -7,6 +7,7 @@
                 <!-- <li *ngFor="let user of users"> -->
                 <app-user 
                     [user]="user"
+                    [selected]="user.id === selectedUserId"
                     (select)="onSelectUser($event)"
                 />
             </li>
@@ -14,7 +15,7 @@
   </ul>
 
      @if (selectUser) {
-            <app-tasks [idUser]="selectUser.id"  [name]="selectUser.name" />
+            <app-tasks [userId]="selectUser.id"  [name]="selectUser.name" />
         } @else {
             <p id="fallback">Select a user to see their tasks!</p>
         }
